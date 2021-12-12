@@ -19,8 +19,8 @@
   function displaySwitch() {
     playerAturn = !playerAturn;
   	if (playerAturn) {
-    	displayText.innerText = "Player A ist dran. Setze X.";
-    } else {displayText.innerText = "Player B ist dran. Setze O.";}
+    	displayText.innerText = "Player A's turn. Place X.";
+    } else {displayText.innerText = "Player B's turn. Place O.";}
   }
   
   function setSymbol(){
@@ -63,7 +63,7 @@
   
   function checkEndGame() {
   	if (turns == 0) {
-    	displayText.innerText = "Gleichstand. Keiner gewinnt";
+    	displayText.innerText = "Draw. Nobody wins.";
       removeListeners();
     } else {
     	displaySwitch();
@@ -72,8 +72,8 @@
   
   function displayWin(){
   	if (playerAturn) {
-    	displayText.innerText = "Player A hat gewonnen!";
-    } else {displayText.innerText = "Player B hat gewonnen!";}
+    	displayText.innerText = "Player A wins!";
+    } else {displayText.innerText = "Player B wins!";}
    removeListeners();
   }
   
